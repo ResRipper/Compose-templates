@@ -38,7 +38,7 @@ You can create them as below:
 
 ```shell
 sudo groupadd -g 2001 container && \
-sudo useradd -u 2001 -g 2001 -m container && \
+sudo useradd -u 2001 -g 2001 -m container
 ```
 
 To create user without a home folder, use `-M` instead of `-m`.
