@@ -1,0 +1,12 @@
+services:
+    portainer:
+        container_name: portainer
+        image: portainer/portainer-ce:alpine
+        volumes:
+            - type: bind
+              source: /var/run/docker.sock
+              target: /var/run/docker.sock
+            - /var/docker/management/pt:/data
+        ports:
+            - 8000:8000 # Optional, TCP tunnel server for edge agents
+            - 9443:9443 # HTTPS, UI and API
