@@ -1,0 +1,11 @@
+services:
+    ss-server:
+        container_name: ss-server
+        image: resripper/shadowsocks-rust:v1.15.2
+        environment:
+            - ENCRYPT=chacha20-ietf-poly1305
+            - PASSWD=<password>
+            - PLUGIN=v2ray-plugin
+            - PLUGIN_OPT=server
+        ports:
+            - 10000:10000
