@@ -1,7 +1,7 @@
 services:
     syncthing:
         container_name: sync
-        image: syncthing/syncthing:1
+        image: syncthing/syncthing:1.23.0
         restart: unless-stopped
         environment:
             - PUID=2001
